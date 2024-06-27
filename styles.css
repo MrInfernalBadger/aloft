@@ -100,14 +100,14 @@ button:hover {
 ##     ##  ##  ##     ## 
 ########  ####  #######   */
 
-#bio_image {
-    width: 95%;
+#bio-image {
+    width: 75%;
     border-radius: 100%;
 }
 
-#bio_text {
+#bio-text {
     text-align: center;
-    width: 80%;
+    width: 90%;
     padding-bottom: 50px;
 }
 
@@ -119,3 +119,107 @@ button:hover {
 ##     ## #########       ##       ## ######### ##    ##  ##             ## 
 ##     ## ##     ## ##    ## ##    ## ##     ## ##    ##  ##       ##    ## 
 ##     ## ##     ##  ######   ######  ##     ##  ######   ########  ######   */
+
+/* #logo,
+#CTA,
+#bio-image,
+#bio-text {
+    display: none;
+} */
+
+
+#massage-descriptions,
+#massage-descriptions * {
+    margin: 0;
+    padding: 0;
+}
+
+
+#relaxation-title,
+#relaxation-text {
+    text-align: right;
+}
+
+#remedial-text {
+    margin-bottom: 30px;
+}
+
+iframe {
+    padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+/* 320
+480
+768
+1024
+1280
+1440 */
+
+p.invisible {
+    display: none;
+}
+
+p.screen-320 {
+    display: fixed;
+    color: blue;
+}
+
+/*                                             
+##     ## ######## ########  ####    ###    
+###   ### ##       ##     ##  ##    ## ##   
+#### #### ##       ##     ##  ##   ##   ##  
+## ### ## ######   ##     ##  ##  ##     ## 
+##     ## ##       ##     ##  ##  ######### 
+##     ## ##       ##     ##  ##  ##     ## 
+##     ## ######## ########  #### ##     ##  */
+/* Media query for screens larger than 480px and up to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* Media query for screens larger than 768px and up to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* Media query for screens larger than 1024px and up to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/* Media query for screens larger than 1280px and up to 1440px */
+@media (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+/* Media query for screens larger than 1440px */
+@media (min-width: 1441px) {
+
+}
+
+/* 
+########  ######## ##     ## 
+##     ## ##       ##     ## 
+##     ## ##       ##     ## 
+##     ## ######   ##     ## 
+##     ## ##        ##   ##  
+##     ## ##         ## ##   
+########  ########    ###     */
+
+
+
+.floating-element {
+    position: fixed;
+    font-size: 2rem;
+    margin-right: 20px;
+    top: 0;
+    right: 0;
+    border: 3px solid #73AD21;
+}
+
