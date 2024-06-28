@@ -1,6 +1,13 @@
 * {
-    outline: 1px solid lightgray;
+    /* outline: 1px solid lightgray; */
   }
+
+:root {
+    --primary-color: #69B1A2;
+    --secondary-color: #FFBC1F;
+
+    --text-size: 1rem;
+}
 
 #content {
     display: flex;
@@ -40,33 +47,22 @@
 ##    ##    ##    ##     ## 
  ######     ##    ##     ##  */
 #CTA {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 
 }
 
-a {
-    text-decoration: none;
-}
-a:hover {
+#CTA > a {
     text-decoration: none;
 }
 
-/* Buttons side by side */
-#booknowButton,
-#giftcardButton {
-    margin: 10px;
+#CTA > a:hover {
+    text-decoration: none;
 }
 
-/* Buttons stacked */
-/* #booknowButton,
-#giftcardButton {
-    display: block;
-    width: 200px;
+
+#CTA > a > button {
+    font-size: 0.95rem;
 }
-#booknowButton {
-    margin-bottom: 20px;
-} */
 
 
 button {
@@ -79,13 +75,13 @@ button {
     font-family: Arial;
     color: #000000;
     font-size: 20px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px;
     border: solid #000000 3px;
     text-decoration: none;
 }
 
 
-.btn:hover {
+button:hover {
     background: #6bad9f;
     background-image: -webkit-linear-gradient(top, #92dece, #6bad9f);
     background-image: -moz-linear-gradient(top, #92dece, #6bad9f);
@@ -104,6 +100,14 @@ button {
 ##     ##  ##  ##     ## 
 ##     ##  ##  ##     ## 
 ########  ####  #######   */
+#bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
 
 #bio-image {
     width: 75%;
@@ -158,23 +162,6 @@ iframe {
 
 
 
-/* 320
-480
-768
-1024
-1280
-1440 */
-
-
-
-#size-indicator {
-    display: fixed;
-    color: blue;
-}
-
-#size-indicator:after {
-    content: '<480';
-}
 
 /*                                             
 ##     ## ######## ########  ####    ###    
@@ -186,44 +173,82 @@ iframe {
 ##     ## ######## ########  #### ##     ##  */
 
 
-@media (min-width: 481px) {
+#size-indicator {
+    display: fixed;
+    color: blue;
+}
 
-    #size-indicator:after {
-        content: '480-768';
+#size-indicator:after {
+    content: '320-370';    
+}
+
+
+
+@media (min-width: 371px) {#size-indicator:after {content: '370-480';}
+
+    #booknowButton,
+    #giftcardButton {
+    margin: 0px 10px;
+    }
+
+    #CTA > a > button {
+        font-size: 1rem;
+    }
+
+    #bio-text {
+        font-size: 1.2rem;
+        width: 100%;
     }
 
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 481px) {#size-indicator:after {content: '480-768';}
+
+    #CTA > a > button {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width: 769px) {#size-indicator:after {content: '768-1024';}
 /* CHANGE TO THE DESKTOP LAYOUT */
-    #size-indicator:after {
-        content: '768-1024';
+    #logo {
+        width: 60%;
+        max-width: 600px;
     }
+
+    #bio {
+        flex-direction: row-reverse;
+    }
+    #bio-image {
+        width: 55%;
+        max-width: 550px;
+        border-radius: 12%;
+    }
+
+    #bio-text {
+        font-size: 1.5rem;   
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 1025px) {#size-indicator:after {content: '1024-1280';}
+
 }
 
 
-@media (min-width: 1025px) {
+@media (min-width: 1281px) {#size-indicator:after {content: '1280-1440';}
 
-    #size-indicator:after {
-        content: '1024-1280';
-    }
 }
 
 
-@media (min-width: 1281px) {
+@media (min-width: 1441px) {#size-indicator:after {content: '1440+';}
 
-    #size-indicator:after {
-        content: '1280-1440';
-    }
-}
-
-
-@media (min-width: 1441px) {
-
-    #size-indicator:after {
-        content: '1440+';
-    }
 }
 
 /* 
