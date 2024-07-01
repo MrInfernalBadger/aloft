@@ -1,9 +1,10 @@
 * {
-    /* outline: 1px solid lightgray; */
+    outline: 1px solid lightgray;
   }
 
 :root {
     --primary-color: #69B1A2;
+    --primary-color-soft: #86ddcc;
     --secondary-color: #FFBC1F;
 
     --text-size: 1rem;
@@ -23,6 +24,47 @@
     margin: 0;
     padding: 0;
 }
+
+.center-text {
+    text-align: center;
+}
+
+
+/* 
+##     ## ########    ###    ########  ######## ########  
+##     ## ##         ## ##   ##     ## ##       ##     ## 
+##     ## ##        ##   ##  ##     ## ##       ##     ## 
+######### ######   ##     ## ##     ## ######   ########  
+##     ## ##       ######### ##     ## ##       ##   ##   
+##     ## ##       ##     ## ##     ## ##       ##    ##  
+##     ## ######## ##     ## ########  ######## ##     ##  */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: -80px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 4px solid black;
+    transition: top 0.5s;
+}
+
+header > img {
+    width: 15%;
+    background-image: none;
+    padding-right: 8px;
+    max-height: 80px;
+}
+
+.header-CTA {
+    font-size: 15px;
+    padding: 10px 10px 10px;
+    border: solid #000000 1.5px;
+}
+
 
 
 /* 
@@ -137,11 +179,7 @@ button:hover {
 } */
 
 
-#massage-descriptions,
-#massage-descriptions * {
 
-    text-align: center;
-}
 
 
 
@@ -154,11 +192,36 @@ iframe {
     padding-bottom: 100px;
 }
 
+/* 
+##        #######   ######     ###    ######## ####  #######  ##    ## 
+##       ##     ## ##    ##   ## ##      ##     ##  ##     ## ###   ## 
+##       ##     ## ##        ##   ##     ##     ##  ##     ## ####  ## 
+##       ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ## 
+##       ##     ## ##       #########    ##     ##  ##     ## ##  #### 
+##       ##     ## ##    ## ##     ##    ##     ##  ##     ## ##   ### 
+########  #######   ######  ##     ##    ##    ####  #######  ##    ##  */
+
+#location {
+    margin-top: 50px;
+}
 
 
 
 
+/* 
+########  #######   #######  ######## ######## ########  
+##       ##     ## ##     ##    ##    ##       ##     ## 
+##       ##     ## ##     ##    ##    ##       ##     ## 
+######   ##     ## ##     ##    ##    ######   ########  
+##       ##     ## ##     ##    ##    ##       ##   ##   
+##       ##     ## ##     ##    ##    ##       ##    ##  
+##        #######   #######     ##    ######## ##     ##  */
 
+
+#footer-content {
+    display: flex;
+    
+}
 
 
 
@@ -176,6 +239,7 @@ iframe {
 #size-indicator {
     display: fixed;
     color: blue;
+    z-index: 100;
 }
 
 #size-indicator:after {
