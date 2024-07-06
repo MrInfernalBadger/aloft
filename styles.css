@@ -1,14 +1,29 @@
 * {
-    outline: 1px solid lightgray;
+    /* outline: 1px solid lightgray; */
   }
 
 :root {
     --primary-color: #69B1A2;
     --primary-color-soft: #86ddcc;
+    --primary-color-softer: #DBF0EC;
     --secondary-color: #FFBC1F;
-
     --text-size: 1rem;
 }
+
+html, body {
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color from parent */
+    display: block; /* Make links behave like block elements */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    /* Add other styles as needed to match <p> element behavior */
+  }
 
 #content {
     display: flex;
@@ -29,6 +44,46 @@
     text-align: center;
 }
 
+.full-width-line {
+    border: none;
+    height: 3px; /* Slightly thicker line */
+    background-color: black;
+    width: 100%;
+    margin: 0 0; /* Adds space above and below the line */
+  }
+
+.container-reset {
+margin: 0;                /* Remove all margins */
+padding: 0;               /* Remove all padding */
+border: none;             /* Remove all borders */
+box-sizing: border-box;   /* Set box-sizing to border-box */
+}
+
+
+/* 
+########  #######  ##    ## ######## 
+##       ##     ## ###   ##    ##    
+##       ##     ## ####  ##    ##    
+######   ##     ## ## ## ##    ##    
+##       ##     ## ##  ####    ##    
+##       ##     ## ##   ###    ##    
+##        #######  ##    ##    ##     */
+
+.assistant-font-text, p {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.5px;
+}
+
+.assistant-font-heading, h2 {
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -1px;
+}
 
 /* 
 ##     ## ########    ###    ########  ######## ########  
@@ -90,7 +145,9 @@ header > img {
  ######     ##    ##     ##  */
 #CTA {
     margin: 20px 0px;
-
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 #CTA > a {
@@ -114,7 +171,7 @@ button {
     -webkit-box-shadow: 3px 6px 5px #666666;
     -moz-box-shadow: 3px 6px 5px #666666;
     box-shadow: 3px 6px 5px #666666;
-    font-family: Arial;
+    font-family: "Assistant", sans-serif;
     color: #000000;
     font-size: 20px;
     padding: 10px 20px 10px;
@@ -146,8 +203,9 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    margin-top: 20px;
 }
 
 
@@ -158,7 +216,7 @@ button:hover {
 
 #bio-text {
     text-align: center;
-    width: 90%;
+    width: 100%;
     padding-bottom: 50px;
 }
 
@@ -188,9 +246,6 @@ button:hover {
     margin-bottom: 30px;
 }
 
-iframe {
-    padding-bottom: 100px;
-}
 
 /* 
 ##        #######   ######     ###    ######## ####  #######  ##    ## 
@@ -203,8 +258,80 @@ iframe {
 
 #location {
     margin-top: 50px;
+    margin-bottom: 80px;
 }
 
+#location > p {
+    font-size: larger;
+}
+
+#map {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0px;
+}
+/* 
+########  ########  ####  ######  ########  ######  
+##     ## ##     ##  ##  ##    ## ##       ##    ## 
+##     ## ##     ##  ##  ##       ##       ##       
+########  ########   ##  ##       ######    ######  
+##        ##   ##    ##  ##       ##             ## 
+##        ##    ##   ##  ##    ## ##       ##    ## 
+##        ##     ## ####  ######  ########  ######   */
+
+#prices {
+    margin-bottom: 80px;
+}
+
+#price-list {
+    text-align: right;
+    font-style: italic;
+    margin-right: 10%;
+}
+
+
+
+
+/* 
+##       ########    ###    ##     ## ########  ######  
+##       ##         ## ##   ##     ## ##       ##    ## 
+##       ##        ##   ##  ##     ## ##       ##       
+##       ######   ##     ## ##     ## ######    ######  
+##       ##       #########  ##   ##  ##             ## 
+##       ##       ##     ##   ## ##   ##       ##    ## 
+######## ######## ##     ##    ###    ########  ######   */
+
+.background-leaf{
+    position: absolute;
+    width: 320px;
+    z-index: -1;
+    filter: invert(88%) sepia(43%) saturate(265%) hue-rotate(101deg) brightness(98%) contrast(89%);
+    opacity: 0.3;
+}
+
+.reversed {
+    transform: scaleX(-1);
+}
+
+.leaf-one {
+    top: 280px;
+    left: -160px;
+}
+
+.leaf-two {
+    top: 500px;
+    left: 160px;
+}
+
+.leaf-three {
+    top: 800px;
+    left: -160px;
+}
+
+.leaf-four {
+    top: 1100px;
+    left: 160px;
+}
 
 
 
@@ -217,12 +344,57 @@ iframe {
 ##       ##     ## ##     ##    ##    ##       ##    ##  
 ##        #######   #######     ##    ######## ##     ##  */
 
-
-#footer-content {
-    display: flex;
-    
+footer {
+    width: 100%;
+    background: var(--primary-color-softer);
 }
 
+#footer-content {
+    width: 90%;   
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#acknowledgment {
+    margin-bottom: 60px;
+}
+
+#footer-content > img {
+    width: 30%
+}
+
+#footer-contact-socials {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#footer-address {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+#footer-address > p {
+    margin: 0;
+}
+
+#footer-socials a {
+    display: flex;
+}
+
+#footer-socials img {
+    width: 2rem;
+    height: 2rem;
+    margin: auto auto auto 0;
+}
+#footer-socials p {
+    width: 100%;
+    margin-left: 0.5rem;
+}
 
 
 
@@ -240,6 +412,7 @@ iframe {
     display: fixed;
     color: blue;
     z-index: 100;
+    opacity: 0;
 }
 
 #size-indicator:after {
