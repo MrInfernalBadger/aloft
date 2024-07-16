@@ -16,13 +16,12 @@ html, body {
 }
 
 a {
-    text-decoration: none; /* Remove default underline */
-    color: inherit; /* Inherit text color from parent */
-    display: block; /* Make links behave like block elements */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    /* Add other styles as needed to match <p> element behavior */
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    padding: 0; 
+    margin: 0; 
+    cursor: pointer; 
   }
 
 #content {
@@ -33,6 +32,11 @@ a {
     margin: auto;
     margin-top: 25px;
     height: 100%;
+}
+
+#content,
+#footer-content {
+    max-width: 1400px;
 }
 
 .no-padding-no-margin {
@@ -46,10 +50,10 @@ a {
 
 .full-width-line {
     border: none;
-    height: 3px; /* Slightly thicker line */
+    height: 3px; 
     background-color: black;
     width: 100%;
-    margin: 0 0; /* Adds space above and below the line */
+    margin: 0;
   }
 
 .container-reset {
@@ -58,6 +62,10 @@ padding: 0;               /* Remove all padding */
 border: none;             /* Remove all borders */
 box-sizing: border-box;   /* Set box-sizing to border-box */
 }
+
+
+
+
 
 
 /* 
@@ -99,7 +107,7 @@ header {
     width: 100%;
     height: 80px;
     top: -80px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-softer);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -107,17 +115,21 @@ header {
     transition: top 0.5s;
 }
 
-header > img {
+#header-image {
     width: 15%;
-    background-image: none;
-    padding-right: 8px;
-    max-height: 80px;
+    padding-left: 8px;
+    max-height: 95%;
 }
 
-.header-CTA {
-    font-size: 15px;
-    padding: 10px 10px 10px;
-    border: solid #000000 1.5px;
+#header-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 2;
+}
+
+
+#spacing-image {
+    display: none;
 }
 
 
@@ -150,16 +162,15 @@ header > img {
     width: 100%;
 }
 
-#CTA > a {
+button {
     text-decoration: none;
 }
 
-#CTA > a:hover {
+button:hover {
     text-decoration: none;
 }
 
-
-#CTA > a > button {
+button {
     font-size: 0.95rem;
 }
 
@@ -206,6 +217,7 @@ button:hover {
     width: 100%;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -217,7 +229,7 @@ button:hover {
 #bio-text {
     text-align: center;
     width: 100%;
-    padding-bottom: 50px;
+
 }
 
 /* 
@@ -229,21 +241,9 @@ button:hover {
 ##     ## ##     ## ##    ## ##    ## ##     ## ##    ##  ##       ##    ## 
 ##     ## ##     ##  ######   ######  ##     ##  ######   ########  ######   */
 
-/* #logo,
-#CTA,
-#bio-image,
-#bio-text {
-    display: none;
-} */
 
-
-
-
-
-
-
-#remedial-text {
-    margin-bottom: 30px;
+#massage-descriptions {
+    margin-bottom: 50px;
 }
 
 
@@ -257,8 +257,7 @@ button:hover {
 ########  #######   ######  ##     ##    ##    ####  #######  ##    ##  */
 
 #location {
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 #location > p {
@@ -267,9 +266,12 @@ button:hover {
 
 #map {
     width: 100%;
-    margin: auto;
-    margin-bottom: 0px;
+    /* margin: auto;
+    margin-bottom: 0px; */
 }
+
+
+
 /* 
 ########  ########  ####  ######  ########  ######  
 ##     ## ##     ##  ##  ##    ## ##       ##    ## 
@@ -280,17 +282,27 @@ button:hover {
 ##        ##     ## ####  ######  ########  ######   */
 
 #prices {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+}
+
+#prices-text {
+    font-size: 1.2rem;
 }
 
 #price-list {
-    text-align: right;
     font-style: italic;
-    margin-right: 10%;
+    line-height: 0.45rem;
+    margin-bottom: 2rem;
 }
 
+#custom-session {
+    font-size: 0.9rem;
+    font-style: italic;
+}
 
-
+#5-pass-button {
+    background-color: blue;
+}
 
 /* 
 ##       ########    ###    ##     ## ########  ######  
@@ -359,10 +371,12 @@ footer {
 
 #acknowledgment {
     margin-bottom: 60px;
+    text-align: center;
+    font-style: italic;
 }
 
 #footer-content > img {
-    width: 30%
+    width: 40%
 }
 
 #footer-contact-socials {
@@ -375,10 +389,11 @@ footer {
     margin-left: 3%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
+    justify-content: space-around;
+    padding-top: 0.55rem;
 }
-#footer-address > p {
+
+#footer-address p {
     margin: 0;
 }
 
@@ -391,28 +406,34 @@ footer {
     height: 2rem;
     margin: auto auto auto 0;
 }
+
 #footer-socials p {
     width: 100%;
     margin-left: 0.5rem;
 }
 
+#copyright {
+    margin-bottom: 0.2rem;
+}
 
 
-/*                                             
-##     ## ######## ########  ####    ###    
-###   ### ##       ##     ##  ##    ## ##   
-#### #### ##       ##     ##  ##   ##   ##  
-## ### ## ######   ##     ##  ##  ##     ## 
-##     ## ##       ##     ##  ##  ######### 
-##     ## ##       ##     ##  ##  ##     ## 
-##     ## ######## ########  #### ##     ##  */
+
+/* 
+        ##     ## ######## ########  ####    ###            
+        ###   ### ##       ##     ##  ##    ## ##           
+        #### #### ##       ##     ##  ##   ##   ##          
+####### ## ### ## ######   ##     ##  ##  ##     ## ####### 
+        ##     ## ##       ##     ##  ##  #########         
+        ##     ## ##       ##     ##  ##  ##     ##         
+        ##     ## ######## ########  #### ##     ##          */
 
 
 #size-indicator {
     display: fixed;
     color: blue;
     z-index: 100;
-    opacity: 0;
+    opacity: 0.5;
+    /* opacity: 0; */
 }
 
 #size-indicator:after {
@@ -421,35 +442,178 @@ footer {
 
 
 
-@media (min-width: 371px) {#size-indicator:after {content: '370-480';}
 
-    #booknowButton,
-    #giftcardButton {
-    margin: 0px 10px;
-    }
+/* 
+ #######  ########   #####           ##         #######    #####   
+##     ## ##    ##  ##   ##          ##    ##  ##     ##  ##   ##  
+       ##     ##   ##     ##         ##    ##  ##     ## ##     ## 
+ #######     ##    ##     ## ####### ##    ##   #######  ##     ## 
+       ##   ##     ##     ##         ######### ##     ## ##     ## 
+##     ##   ##      ##   ##                ##  ##     ##  ##   ##  
+ #######    ##       #####                 ##   #######    #####    */
+@media (min-width: 370px) {#size-indicator:after {content: '370-480';}
 
-    #CTA > a > button {
-        font-size: 1rem;
+
+    button {
+        margin: 0px 10px;
+        font-size: 1.2rem;
     }
 
     #bio-text {
-        font-size: 1.2rem;
         width: 100%;
     }
 
+    footer p {
+        font-size: 1.2rem;
+    }
+
 }
 
 
+
+/* 
+##         #######    #####           ########  #######   #######  
+##    ##  ##     ##  ##   ##          ##    ## ##     ## ##     ## 
+##    ##  ##     ## ##     ##             ##   ##        ##     ## 
+##    ##   #######  ##     ## #######    ##    ########   #######  
+######### ##     ## ##     ##           ##     ##     ## ##     ## 
+      ##  ##     ##  ##   ##            ##     ##     ## ##     ## 
+      ##   #######    #####             ##      #######   #######   */
 @media (min-width: 481px) {#size-indicator:after {content: '480-768';}
 
-    #CTA > a > button {
+    #header-image {
+        width: 25%;
+    }
+    
+    p, 
+    footer p {
+        font-size: 1.35rem;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    #logo {
+        width: 75%;
+    }
+
+    button {
         font-size: 1.5rem;
+    }
+
+
+    /*                             
+            #              
+    ### ###     ### ###  ## 
+    # # #    #  #   ##   #  
+    ### #    ## ### ### ##  
+    #                        */
+
+        #prices-text {
+            font-size: 1.35rem;
+        }
+
+
+        #custom-session {
+            font-size: 1rem;
+        }
+
+    /*                         
+    ##          #          
+    #  ### ### ### ### ### 
+    ### # # # #  #  ##  #   
+    #  ### ###  ## ### #   
+    ##                       */
+
+    #footer-socials img {
+        width: 2.5rem;
+        height: 2.5rem;
+    } 
+}
+
+
+
+/* 
+########  #######   #######             ##     #####    #######  ##        
+##    ## ##     ## ##     ##          ####    ##   ##  ##     ## ##    ##  
+    ##   ##        ##     ##            ##   ##     ##        ## ##    ##  
+   ##    ########   #######  #######    ##   ##     ##  #######  ##    ##  
+  ##     ##     ## ##     ##            ##   ##     ## ##        ######### 
+  ##     ##     ## ##     ##            ##    ##   ##  ##              ##  
+  ##      #######   #######           ######   #####   #########       ##   */
+@media (min-width: 769px) {#size-indicator:after {content: '768-1024';}
+
+    #logo {
+        margin-bottom: 30px;
+    }
+
+    #CTA {
+        justify-content: center;
+    }
+
+    button {
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 20px;
+        font-size: 1.8rem;
+    }
+
+    #bio-image {
+        width: 50%;
+    }
+
+    #location {
+        width: 600px;
+    }
+
+    #acknowledgment,
+    #footer-address p,
+    #footer-socials a {
+        font-size: 1.5rem;
+    }
+
+    #footer-socials img {
+        width: 3rem;
+        height: 3rem;
+    } 
+
+    /* HEADER */
+    
+    #header-links {
+        display: flex;
+    }
+
+    #header-image {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    #spacing-image {
+        display: flex;
+        opacity: 0;
+    }
+
+    #spacing-image,
+    #header-image {
+        margin: 10px;
     }
 }
 
 
-@media (min-width: 769px) {#size-indicator:after {content: '768-1024';}
-/* CHANGE TO THE DESKTOP LAYOUT */
+
+/* 
+   ##     #####    #######  ##                   ##    #######   #######    #####   
+ ####    ##   ##  ##     ## ##    ##           ####   ##     ## ##     ##  ##   ##  
+   ##   ##     ##        ## ##    ##             ##          ## ##     ## ##     ## 
+   ##   ##     ##  #######  ##    ##  #######    ##    #######   #######  ##     ## 
+   ##   ##     ## ##        #########            ##   ##        ##     ## ##     ## 
+   ##    ##   ##  ##              ##             ##   ##        ##     ##  ##   ##  
+ ######   #####   #########       ##           ###### #########  #######    #####    */
+@media (min-width: 1025px) {#size-indicator:after {content: '1024-1280';}
+/* DESKTOP LAYOUT */
     #logo {
         width: 60%;
         max-width: 600px;
@@ -458,32 +622,83 @@ footer {
     #bio {
         flex-direction: row-reverse;
     }
+
     #bio-image {
-        width: 55%;
+        width: 40%;
         max-width: 550px;
-        border-radius: 12%;
+        border-radius: 20%;
     }
 
     #bio-text {
         font-size: 1.5rem;   
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: auto 20px;
     }
 
+    #massage-descriptions {
+        display: flex;
+        justify-content: space-between
+    }
+
+    #remedial-text,
+    #relaxation-text {
+        width: 90%;
+        margin: auto;
+    }
+
+
+    #footer-content > img {
+        width: 20%
+    }
+
+
+
+    #location-prices {
+        display: flex;
+    }
+
+    #prices {
+        margin-left: 12px;
+        order: -1;
+        width: 40%;
+    }
+
+    #location {
+
+    }
+    
+
+
+    #CTA,
+    #bio,
+    #massage-descriptions {
+        margin-bottom: 80px;
+    }
 }
 
-@media (min-width: 1025px) {#size-indicator:after {content: '1024-1280';}
-
-}
 
 
+/* 
+   ##    #######   #######    #####              ##   ##        ##          #####   
+ ####   ##     ## ##     ##  ##   ##           ####   ##    ##  ##    ##   ##   ##  
+   ##          ## ##     ## ##     ##            ##   ##    ##  ##    ##  ##     ## 
+   ##    #######   #######  ##     ## #######    ##   ##    ##  ##    ##  ##     ## 
+   ##   ##        ##     ## ##     ##            ##   ######### ######### ##     ## 
+   ##   ##        ##     ##  ##   ##             ##         ##        ##   ##   ##  
+ ###### #########  #######    #####            ######       ##        ##    #####    */
 @media (min-width: 1281px) {#size-indicator:after {content: '1280-1440';}
 
 }
 
 
+
+/* 
+   ##   ##        ##          #####          
+ ####   ##    ##  ##    ##   ##   ##    ##   
+   ##   ##    ##  ##    ##  ##     ##   ##   
+   ##   ##    ##  ##    ##  ##     ## ###### 
+   ##   ######### ######### ##     ##   ##   
+   ##         ##        ##   ##   ##    ##   
+ ######       ##        ##    #####           */
 @media (min-width: 1441px) {#size-indicator:after {content: '1440+';}
 
 }
@@ -507,4 +722,6 @@ footer {
     right: 0;
     border: 3px solid #73AD21;
 }
+
+
 
